@@ -1,11 +1,17 @@
-orbs:
-  orb: choilmto/orb@0.0.1
-
-version: 2.1
 jobs:
   build:
-    machine:
-      image: 'ubuntu-1604:201903-01'
+    docker:
+      - image: cimg/node:14.13.1
     steps:
       - checkout
-      - orb/log
+      - run:
+          command: npm run build
+  
+orbs:
+  orb: choilmto/orb@0.1.0
+version: 2.1
+workflows:
+  build:
+    jobs:
+      - orb/workflow-collector
+      - build
