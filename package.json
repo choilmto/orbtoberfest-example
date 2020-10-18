@@ -5,15 +5,20 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "log:build_time": "node logger.js | pino-logflare --key $LOGFLARE_KEY --source $LOGFLARE_SOURCE_ID"
   },
   "dependencies": {
     "date-fns": "^2.11.1",
     "gray-matter": "^4.0.2",
     "next": "9.5.3",
+    "pino": "^6.7.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark": "^12.0.0",
     "remark-html": "^12.0.0"
+  },
+  "devDependencies": {
+    "pino-logflare": "^0.3.5"
   }
 }
