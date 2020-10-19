@@ -17,7 +17,7 @@ jobs:
       - run:
           command: npm run test
 orbs:
-  orb: choilmto/orb@0.7.0
+  orb: choilmto/orb@1.0.1
 workflows:
   build-log:
     jobs:
