@@ -17,12 +17,11 @@ jobs:
       - run:
           command: npm run test
 orbs:
-  orb: choilmto/orb@0.4.1
+  orb: choilmto/orb@0.7.0
 workflows:
   build-log:
     jobs:
       - orb/workflow-collector:
           org-name: "choilmto"
-          vcs-slug: "gh"
       - build
       - test
