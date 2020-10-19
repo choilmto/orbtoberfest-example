@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "log:build_time": "node logger.js | pino-logflare --key $LOGFLARE_KEY --source $LOGFLARE_SOURCE_ID"
+    "log:build_time": "node logger.js | pino-logflare --key $LOGFLARE_KEY --source $LOGFLARE_SOURCE_ID",
+    "test": "echo 'test'"
   },
   "dependencies": {
     "date-fns": "^2.11.1",

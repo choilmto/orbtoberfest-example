@@ -9,6 +9,13 @@ jobs:
           command: npm install
       - run:
           command: npm run build
+  test:
+    docker:
+      - image: cimg/node:14.13.1
+    steps:
+      - checkout
+      - run:
+          command: npm run test
 orbs:
   orb: choilmto/orb@0.4.1
 workflows:
@@ -18,3 +25,4 @@ workflows:
           org-name: "choilmto"
           vcs-slug: "gh"
       - build
+      - test
